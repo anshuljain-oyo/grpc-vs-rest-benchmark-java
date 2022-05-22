@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.oyo.samplegrpcserver.service";
+option java_outer_classname = "HotelDataProto";
+option optimize_for = SPEED;
+
+service HotelDataProtoService {
+  rpc GetRandomHotelDataObjects(GetRandomHotelDataObjectsRequest) returns (GetRandomHotelDataObjectsResponse) {
+  }
+
+  rpc GetRandomHotelDataObject(Empty) returns (GetRandomHotelDataObjectResponse) {
+  }
+}
+
+message GetRandomHotelDataObjectsRequest {
+  int32 count = 1;
+}
+
+message GetRandomHotelDataObjectsResponse {
+  repeated HotelDataObject hotelDataObjects = 1;
+}
+
+message GetRandomHotelDataObjectResponse {
+  HotelDataObject hotelDataObject = 1;
+}
+
+// A generic empty message that you can re-use to avoid defining duplicated
+// empty messages in your APIs
+message Empty {
+}
+
+message HotelDataObject {
+  int32 id = 1;
+  int32 hotelId = 2;
+  int32 countryId = 3;
+  HotelType hotelType = 4;
+  bool wizardEnabled = 5;
+  string oyoId = 6;
+  string geoLocation = 7;
+  bool isCpEnabled = 8;
+}
+
+enum HotelType {
+  hotel = 0;
+  home = 1;
+  belvilla = 2;
+  subscription_hotel = 3;
+}
+
+
