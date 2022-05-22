@@ -99,7 +99,7 @@
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="REST - Small Input - Response Time Graph" enabled="true">
+        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="REST - Small Input[1] - Response Time Graph" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -135,7 +135,7 @@
           </objProp>
           <stringProp name="filename"></stringProp>
           <stringProp name="RespTimeGraph.interval">100</stringProp>
-          <stringProp name="RespTimeGraph.graphtitle">REST - Small Input - Response Time Graph</stringProp>
+          <stringProp name="RespTimeGraph.graphtitle">REST - Small Input[1] - Response Time Graph</stringProp>
         </ResultCollector>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="REST - Large Object - 1" enabled="true">
@@ -255,7 +255,7 @@
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="REST - Medium Input - Response Time Graph" enabled="true">
+        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="REST - Medium Input[100] - Response Time Graph" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -290,8 +290,8 @@
             </value>
           </objProp>
           <stringProp name="filename"></stringProp>
-          <stringProp name="RespTimeGraph.interval">100</stringProp>
-          <stringProp name="RespTimeGraph.graphtitle">REST - Medium Input - Response Time Graph</stringProp>
+          <stringProp name="RespTimeGraph.graphtitle">REST - Medium Input[100] - Response Time Graph</stringProp>
+          <stringProp name="RespTimeGraph.interval">1000</stringProp>
         </ResultCollector>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="REST - Large Objects - 100" enabled="true">
@@ -723,7 +723,7 @@
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="GRPC - Small Input - Response Time Graph" enabled="true">
+        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="GRPC - Small Input[1] - Response Time Graph" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -759,7 +759,7 @@
           </objProp>
           <stringProp name="filename"></stringProp>
           <stringProp name="RespTimeGraph.interval">100</stringProp>
-          <stringProp name="RespTimeGraph.graphtitle">GRPC - Small Input - Response Time Graph</stringProp>
+          <stringProp name="RespTimeGraph.graphtitle">GRPC - Small Input[1] - Response Time Graph</stringProp>
         </ResultCollector>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GRPC - Large Object - 1" enabled="true">
@@ -879,7 +879,7 @@
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="GRPC - Medium Input - Response Time Graph" enabled="true">
+        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="GRPC - Medium Input[100] - Response Time Graph" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -914,8 +914,8 @@
             </value>
           </objProp>
           <stringProp name="filename"></stringProp>
-          <stringProp name="RespTimeGraph.interval">100</stringProp>
-          <stringProp name="RespTimeGraph.graphtitle">GRPC - Medium Input - Response Time Graph</stringProp>
+          <stringProp name="RespTimeGraph.graphtitle">GRPC - Medium Input[100] - Response Time Graph</stringProp>
+          <stringProp name="RespTimeGraph.yaxisscalemaxvalue">50</stringProp>
         </ResultCollector>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GRPC - Large Object - 100" enabled="true">

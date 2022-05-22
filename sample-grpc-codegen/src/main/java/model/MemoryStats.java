@@ -32,4 +32,10 @@ public class MemoryStats {
 
   public MemoryStats() {
   }
+
+  public MemoryStats(Runtime runtime) {
+    this.heapSize = (double)Runtime.getRuntime().totalMemory()/(1024*1024);
+    this.heapMaxSize = (double)Runtime.getRuntime().maxMemory()/ (1024*1024);
+    this.heapFreeSize = (double)Runtime.getRuntime().freeMemory()/ (1024*1024);
+  }
 }

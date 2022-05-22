@@ -9,11 +9,7 @@ public class JvmPropertyController {
 
   @RequestMapping("/memory-status")
   public MemoryStats getMemoryStatistics() {
-    MemoryStats stats = new MemoryStats();
-    stats.setHeapSize((double)Runtime.getRuntime().totalMemory()/(1024*1024));
-    stats.setHeapMaxSize((double)Runtime.getRuntime().maxMemory()/ (1024*1024));
-    stats.setHeapFreeSize((double)Runtime.getRuntime().freeMemory()/ (1024*1024));
-    return stats;
+    return new MemoryStats(Runtime.getRuntime());
   }
 
 }

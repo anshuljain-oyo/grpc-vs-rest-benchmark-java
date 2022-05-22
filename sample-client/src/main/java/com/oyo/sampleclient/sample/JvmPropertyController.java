@@ -17,11 +17,7 @@ public class JvmPropertyController {
 
   @RequestMapping(value = "/memory-status", method = RequestMethod.GET)
   public MemoryStats getMemoryStatistics() {
-    MemoryStats stats = new MemoryStats();
-    stats.setHeapSize((double)Runtime.getRuntime().totalMemory()/(1024*1024));
-    stats.setHeapMaxSize((double)Runtime.getRuntime().maxMemory()/ (1024*1024));
-    stats.setHeapFreeSize((double)Runtime.getRuntime().freeMemory()/ (1024*1024));
-    return stats;
+    return new MemoryStats(Runtime.getRuntime());
   }
 
   @RequestMapping(value = "/rest/memory-status", method = RequestMethod.GET)
@@ -32,6 +28,16 @@ public class JvmPropertyController {
   @RequestMapping(value = "/grpc/memory-status", method = RequestMethod.GET)
   public MemoryStats getGrpcMemoryStatistics() {
     return restTemplate.getForObject("http://localhost:2999/memory-status/", MemoryStats.class);
+  }
+
+  @RequestMapping(value = "/rest/objectSizes", method = RequestMethod.GET)
+  public String getRestObjectSizes() {
+    return restTemplate.getForObject("http://localhost:4000/objectSizes/", String.class);
+  }
+
+  @RequestMapping(value = "/grpc/objectSizes", method = RequestMethod.GET)
+  public String getGrpcObjectSizes() {
+    return restTemplate.getForObject("http://localhost:2999/objectSizes/", String.class);
   }
 
 }
